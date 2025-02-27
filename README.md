@@ -59,6 +59,9 @@ To run the project locally:
 1. Clone the repository:
    ```bash
    git clone https://github.com/niharikamg/Visual-Interfrace.git
+
+   https://niharikamg.github.io/Visual-Interfrace/
+   
    ```
 2. Open `index.html` in a web browser.
 
