@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>County Data Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="topojson.v3.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .parent {
+            margin: 1rem;
+            padding: 2rem 2rem;
+            text-align: center;
+        }
+        .child {
+            display: inline-block;
+            padding: 1rem 1rem;
+            vertical-align: middle;
+        }
+        .viz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    position: relative;
+}
+
+.viz svg {
+    display: block;
+    margin: auto;
+}
+body {
+    background-image: url('grey.jpg'); /* Path to your image */
+    background-size: cover; /* Scale the image to cover the entire page */
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>County Data Visualization</h1>
+    
+    <!-- Dropdown for attributes -->
+    <label for="attribute1">Select First Attribute:</label>
+    <select id="attribute1"></select>
+
+    <label for="attribute2">Select Second Attribute:</label>
+    <select id="attribute2"></select>
+
+    <label for="attribute3">Select Third Attribute:</label>
+    <select id="attribute3"></select>
+
+    <div class='parent'>
+        <div id="charts">
+            <div class='child' id="histogram1"></div>
+            <div class='child' id="histogram2"></div>
+            <div class='child' id="scatterplot"></div>
+        </div>
+    </div>
+
+    <!-- Map container -->
+    <div class="viz-container">
+        <div class="viz" style="position: relative; height: 600px;"></div>
+        <div id="legend-container"></div> <!-- Legend directly below map -->
+    </div>
+    
+
+    <!-- Tooltip container -->
+    <div id="tooltip" 
+        style="position: absolute; 
+                background: rgba(0, 0, 0, 0.8); 
+                color: white; 
+                padding: 10px; 
+                border-radius: 5px; 
+                font-size: 12px; 
+                pointer-events: none; 
+                opacity: 0; 
+                visibility: hidden; 
+                transition: opacity 0.2s, visibility 0.2s; 
+                top: 10px;">
+    </div>
+
+    <!-- External Scripts -->
+    <script src="choroplethMap.js"></script>
+    <script src="script - Copy.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
