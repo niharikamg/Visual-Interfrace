@@ -71,8 +71,3 @@ To run the project locally:
 - More advanced statistical insights.
 - Mobile-friendly UI improvements.
 
-
-
----
-
-Let me know if you'd like any modifications! 🚀
